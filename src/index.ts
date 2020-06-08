@@ -16,7 +16,7 @@ function createNode(path: string[], tree: TreeNode[]) : void {
     if(path.length !== 0) {
       createNode(path, tree[tree.length -1].children)
     }
-  } else {
+  } else if(path.length !== 0) {
     createNode(path, tree[idx].children)
   }
 }
